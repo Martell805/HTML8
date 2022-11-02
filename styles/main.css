@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=El+Messiri&effect=neon');
+
+header {
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+body {
+    margin-top: 250px;
+    font-family: "Open Sans", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "El Messiri", sans-serif;
+}
+
+.aside {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+}
+
+.aside aside {
+    background: #303030;
+    border-radius: 20px 0 0 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.aside aside:hover{
+    background-color: #353535;
+}
+
+.aside a {
+    color:white;
+    text-decoration: none;
+}
+
+aside {
+    background: #303030;
+    border-radius: 20px 0 0 20px;
+    grid-column: 2;
+}
+
+section {
+    background: #303030;
+    padding: 5px;
+    display: block;
+    border-radius: 0 20px 20px 0;
+    grid-column: 1;
+}
+
+footer {
+    background: #303030;
+    grid-column: 1 / span 2;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 20px);
+    place-items: center;
+    gap: 10px;
+}
+
+.old-social {
+    grid-column: 1;
+    grid-row: span 3;
+}
+
+.new-social {
+    grid-column: 2;
+    grid-row: span 2;
+}
+
+section a {
+    text-decoration: none;
+    color: aqua;
+}
+
+address {
+    float: bottom;
+    display: block;
+}
+
+address a {
+    display: inline-block;
+    background-color: #353535;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+address a:active{
+    color: #505050;
+}
+
+address a:visited{
+    color: #757575;
+}
+
+.gallery {
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    padding: 5px;
+    height: 170px;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+@media (orientation: portrait) {
+    .aside {
+        order: -1;
+        float: none;
+        width: auto;
+        margin-bottom: 10px;
+        position: inherit;
+    }
+
+    .gallery {
+        align-items: center;
+    }
+
+    header h1 {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    body {
+        margin-top: 150px;
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 50px;
+        gap: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .aside {
+        grid-column: 1;
+    }
+
+    @media (max-width: 373px){
+        header h1 {
+            margin-left: -40px;
+            width: 100%;
+        }
+    }
+}
