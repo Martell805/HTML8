@@ -26,7 +26,6 @@
                         <li><a class="menu__item" href="index.html#history">История</a></li>
                         <li><a class="menu__item" href="index.html#gallery">Галерея</a></li>
                         <li><a class="menu__item" href="polygon.html">Полигон</a></li>
-                        <li><a class="menu__item" href="index.html#contacts">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,24 +42,30 @@
         </header>
 
         <form autocomplete="on" name="registration" class="form_content">
-            <fieldset>
-                <legend>Регистрация</legend>
+            <div class="fieldset">
+                <h2 class="whole-row">Регистрация</h2>
                 <p>
-                    <label for="name">Имя:</label>
+                    <label for="name">Имя:</label> <br>
                     <input type="text" name="name" id="name" required autofocus placeholder="Отображаемое имя">
                 </p>
+
                 <p>
-                    <label for="email">Электронная почта:</label>
+                    <label for="fullname">ФИО:</label> <br>
+                    <input type="text" name="fullname" id="fullname" required autofocus placeholder="ФИО">
+                </p>
+
+                <p>
+                    <label for="email">Электронная почта:</label> <br>
                     <input type="email" name="email" id="email" required placeholder="Электронная почта" pattern="*@*.*">
                 </p>
                 <p>
-                    <label for="password">Пароль:</label>
+                    <label for="password">Пароль:</label> <br>
                     <input type="password" name="password" id="password" required placeholder="Пароль">
                 </p>
                 <div class="button-row">
-                    <button type="submit" name="submit" class="button1 button2"> Зарегистрироваться </button>
+                    <button type="submit" name="submit" class="button1 button2 whole-row submit-button"> Зарегистрироваться </button>
                 </div>
-            </fieldset>
+            </div>
 
             <span class="form-square form-square1"></span>
             <span class="form-square form-square2"></span>

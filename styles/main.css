@@ -30,13 +30,15 @@ h1 {
 .aside {
     grid-column: 2;
     grid-row: 1 / span 5;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .aside aside {
     background: #303030;
     border-radius: 20px 0 0 20px;
     padding: 5px;
-    margin-bottom: 10px;
 }
 
 .aside aside:hover{
@@ -65,14 +67,23 @@ section {
 footer {
     background: #303030;
     grid-column: 1 / span 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    place-items: start;
+    gap: 10px;
 }
 
-.footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 20px);
-    place-items: center;
+.footer-div {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    padding: 10px;
+}
+
+.footer-div p {
+    margin: 0;
 }
 
 .old-social {
@@ -126,15 +137,30 @@ address a:visited{
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
+    gap: 10px;
+}
+
+.stable-row {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    gap: 10px;
 }
 
 @media (orientation: portrait) {
+    section {
+        width: 97%;
+        margin-right: 3%;
+    }
+
     .aside {
         order: -1;
         float: none;
-        width: auto;
-        margin-bottom: 10px;
         position: inherit;
+
+        width: 97%;
+        margin-left: 3%;
     }
 
     .gallery {
@@ -167,10 +193,20 @@ address a:visited{
         grid-column: 1;
     }
 
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     @media (max-width: 373px){
         header h1 {
             margin-left: -40px;
             width: 100%;
+        }
+    }
+
+    @media (max-width: 444px){
+        footer {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
